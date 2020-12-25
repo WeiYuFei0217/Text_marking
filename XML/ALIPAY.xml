@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<annotation>
+  <project>
+    <x>266</x>
+    <y>33</y>
+    <width>338</width>
+    <height>119</height>
+    <content>支付宝</content>
+  </project>
+  <project>
+    <x>281</x>
+    <y>158</y>
+    <width>310</width>
+    <height>57</height>
+    <content>ALIPAY</content>
+  </project>
+</annotation>
