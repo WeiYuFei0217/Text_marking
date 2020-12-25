@@ -315,8 +315,8 @@ class Application(Frame):
         self.imLabel.bind("<MouseWheel>", self.OnMouseWheel) # 滚轮放大缩小
         self.imLabel.bind("<Motion>", self.aux_line) # 鼠标进入画布，加辅助线
         self.imLabel.bind("<Leave>", self.mouse_leave) # 鼠标离开画布，去掉辅助线
-        self.master.bind('<Down>', self.turn_right) # 右转图像
-        self.master.bind('<Up>', self.turn_left) # 左转图像
+        self.master.bind('<Down>', self.turn_right) # 顺时针旋转图像
+        self.master.bind('<Up>', self.turn_left) # 逆时针旋转图像
         self.master.bind('<space>', self.rec_pic) # 恢复原大小
         self.openxlssheet()
 
@@ -426,7 +426,7 @@ class Application(Frame):
         img_real = np.rot90(img_real)
         img_real = np.rot90(img_real)
         img_real = np.rot90(img_real)
-        choose = str(messagebox.askyesnocancel('逆时针旋转图片', '是否删除此图片已标记框和数据？\n“取消”放弃旋转'))
+        choose = str(messagebox.askyesnocancel('顺时针旋转图片', '是否删除此图片已标记框和数据？\n“取消”放弃旋转'))
         print("choose:", choose, flush=True)
         if choose == "True":
             rectan = ["text_box_position"]
@@ -451,7 +451,7 @@ class Application(Frame):
         print("进入rot_pic", flush=True)
         global img_real
         img_real = np.rot90(img_real)
-        choose = str(messagebox.askyesnocancel('顺时针旋转图片', '是否删除此图片已标记框和数据？\n“取消”放弃旋转'))
+        choose = str(messagebox.askyesnocancel('逆时针旋转图片', '是否删除此图片已标记框和数据？\n“取消”放弃旋转'))
         print("choose:", choose, flush=True)
         if choose == "True":
             rectan = ["text_box_position"]
